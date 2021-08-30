@@ -5,11 +5,11 @@
 // va applicato uno sconto del 40% per gli over 65.
 // Il recap dei dati e l'output del prezzo finale va stampato in pagina (formattato con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 
-// 1. First, it's necessary to save the buttons that will drastically affect the page. The necessity of this action, stem from the fact that we will later have to 'toggle' with the use of the buttons the information of the exercise.
+// 1. First, it's necessary to save the buttons that will drastically affect the page. The necessity of this action, stems from the fact that we will later have to 'toggle' with the use of the buttons the information of the exercise.
 var btnGenerate = document.getElementById("generate");
 var btnCancel=document.getElementById("cancel");
 
-// 2. for each button we'll have to generate an event using the addEventListener property, to allow us to execute the action of calculating the price by clicking on the designate button
+// 2. for each button we'll have to generate an event using the addEventListener property, to allow us to execute the action of calculating the price by clicking on the designated button
 btnGenerate.addEventListener("click",
     function(){
         var name = document.getElementById("name").value;
@@ -18,7 +18,12 @@ btnGenerate.addEventListener("click",
         console.log(number);
         console.log(name);
         console.log(ageRange);
-
+        // 3. having gathered the information required to estimate the price in the different cases(underage/adult/over 65), it is now necessary to create the appropriate if statement/statements to satisfy the condition of the exercise. 
+        // Which is:
+        // calculate the price, defined on the basis of km that have to be  travelled (0.21€ at km);
+        // apply a discount of 20% if the customer is underage;
+        // apply a discount of 40% if the customer is over 65.
+        
 
     }
 );
