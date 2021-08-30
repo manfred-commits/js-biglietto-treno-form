@@ -4,19 +4,45 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- link to the font style -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+        <!-- /link to the font style -->
         <!-- link to the css -->
         <link rel="stylesheet" href="./css/style.css">
         <!-- /link to the css -->
         <title>biglietto-treno-form</title>
     </head>
     <body>
+        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
         <!-- sezione inserimento dati biglietto -->
-        <div class="contaier-form-dati">
-            
-        </div>
+        <section class="contaier-form-dati">
+            <div class="input-form-data-formatting">
+                <label for="name">Nome Cognome</label><br>
+                <input type="text" name="name" placeholder="Inserisci il tuo nome: ">
+            </div>
+            <div class="input-form-data-formatting">
+                <label for="number">Km da percorrere</label><br>
+                <input type="number" name="number" placeholder="Inserisci la tua età:">
+            </div>
+            <div class="input-form-data-formatting">
+                <label for="age">Fascia d'età</label><br>
+                <select name="age" id="age">
+                    <option value="underage">Minorenne</option>
+                    <option value="adult">Maggiorenne</option>
+                    <option value="over">Over 65</option>
+                </select>
+            </div>
+            <div class="button-section">
+                <button id="generate">Genera</button>
+                <button id="cancel">Annulla</button>
+            </div>
+
+        </section>
         <!-- /sezione inserimento dati biglietto -->
         <!-- sezione costo biglietto -->
-        <div class="container-form-biglietto"></div>
+        <section class="container-form-biglietto"></section>
         <!-- /sezione costo biglietto -->
         <script src="./js/script.js"></script>
     </body>

@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* general rules */
+body{
+    background-color: #b91450;
+    font-family: 'Open Sans', sans-serif;
+}
+h1{
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+label{
+    display: inline-block;
+    color: #b91450;
+    padding: 5px;
+    font-weight: 600;
+}
+/* /general rules */
+
+/* section user dati */
+.contaier-form-dati{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center ;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px 3px rgba(00,00,00,0.5);
+    width: 80%;
+    margin: auto;
+}
+.input-form-data-formatting{
+    text-align: center;
+    padding: 25px;
+}
+.button-section{
+    width: 100%;
+    padding-bottom: 20px;
+    text-align: center;
+}
+/* /section user dati */
