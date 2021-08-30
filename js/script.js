@@ -10,6 +10,7 @@ var btnGenerate = document.getElementById("generate");
 var btnCancel = document.getElementById("cancel");
 var discount = 0;
 var pricePerKm=0;
+var offer="";
 
 // 2. for each button we'll have to generate an event using the addEventListener property, to allow us to execute the action of calculating the price by clicking on the designated button
 btnGenerate.addEventListener("click",
@@ -17,30 +18,53 @@ btnGenerate.addEventListener("click",
         var name = document.getElementById("name").value;
         var number = parseInt(document.getElementById("number").value);
         var ageRange = document.getElementById("age").value;
+        
+        // this generates a number between 90000 and 99998
+        const min = 90000;
+        const max = 99999;
+        const trainNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+        
         console.log(number);
         console.log(name);
         console.log(ageRange);
         // 3. having gathered the information required to estimate the price in the different cases(underage/adult/over 65), it is now necessary to create the appropriate if statement/statements to satisfy the condition of the exercise. 
+        
         // Which is:
+
         // calculate the price, defined on the basis of km that have to be  travelled (0.21€ at km);
         // apply a discount of 20% if the customer is underage;
         // apply a discount of 40% if the customer is over 65.
         if(ageRange=="underage"){
             pricePerKm = number * 0.21;
             discount = pricePerKm * 0.20; 
-            pricePerKm = pricePerKm-discount;
+            pricePerKm = pricePerKm - discount;
+            offer="Biglietto Minorenni";            
             console.log(pricePerKm.toFixed(2));
         }else if(ageRange=="over"){
             pricePerKm = number * 0.21;
             discount = pricePerKm * 0.40; 
-            pricePerKm = pricePerKm-discount;
+            pricePerKm = pricePerKm - discount;
+            offer="Biglietto Over 65";
             console.log(pricePerKm.toFixed(2));
         }else{
             pricePerKm = number * 0.21;
+            offer="Biglietto Standard";
             console.log(pricePerKm.toFixed(2));
         }
         // 4.Now that the values are estimated, in the different cases, it's necessary to print the acquired values to the container-form-biglietto which is going to have to be visible 
+
+        // 4.1 makes the ticket-container visible
+
         document.getElementById("ticket").classList.add("open");
+
+        // 4.2 prints the values acquired to the inner html of the appropriate tags in the ticket-container section
+        document.getElementById("passenger-name").innerHTML=name;
+        document.getElementById("offer-type").innerHTML=offer;
+        document.getElementById("train-room").innerHTML=Math.floor((Math.random() * 10) + 1);;
+        document.getElementById("train-number").innerHTML=trainNumber;
+        document.getElementById("ticket-price").innerHTML=pricePerKm.toFixed(2);
+
+
     }
 );
 // second button that at the click of "Annulla" makes the ticket price section disappear and resets the input tags and the select
