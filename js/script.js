@@ -39,12 +39,19 @@ btnGenerate.addEventListener("click",
             pricePerKm = number * 0.21;
             console.log(pricePerKm.toFixed(2));
         }
-        // 4.Now that the values are estimated, in the different cases, it's necessary to print the acquired values to the container-form-biglietto
+        // 4.Now that the values are estimated, in the different cases, it's necessary to print the acquired values to the container-form-biglietto which is going to have to be visible 
+        document.getElementById("ticket").classList.add("open");
+    }
+);
+// second button that at the click of "Annulla" makes the ticket price section disappear and resets the input tags and the select
+btnCancel.addEventListener('click',
+    function(){
+        // hides the ticket at the click
+        document.getElementById("ticket").classList.remove("open");
+        // resets the input tags and the select to ""
+        document.getElementById("name").value="";
+        document.getElementById("number").value="";
+        document.getElementById("age").value="";
         
     }
 );
-// btnCancel.addEventListener('click',
-//     function(){
-//         
-//     }
-// );

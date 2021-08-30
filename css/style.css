@@ -23,6 +23,7 @@ label{
     padding: 5px;
     font-weight: 600;
 }
+
 /* /general rules */
 
 /* section user dati */
@@ -49,6 +50,7 @@ label{
 /* sezione costo biglietto */
 .container-form-biglietto{
     padding: 0px 10px 20px;
+    display: none;
 }
 .container-form-biglietto .ticket-container{
     border: 1px solid black;
@@ -64,3 +66,7 @@ label{
     padding:20px;
 }
 /* /sezione costo biglietto */
+
+.open{
+    display: flex;
+}
