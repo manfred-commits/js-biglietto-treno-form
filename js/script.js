@@ -7,7 +7,9 @@
 
 // 1. First, it's necessary to save the buttons that will drastically affect the page. The necessity of this action, stems from the fact that we will later have to 'toggle' with the use of the buttons the information of the exercise.
 var btnGenerate = document.getElementById("generate");
-var btnCancel=document.getElementById("cancel");
+var btnCancel = document.getElementById("cancel");
+var discount = 0;
+var pricePerKm=0;
 
 // 2. for each button we'll have to generate an event using the addEventListener property, to allow us to execute the action of calculating the price by clicking on the designated button
 btnGenerate.addEventListener("click",
@@ -23,7 +25,20 @@ btnGenerate.addEventListener("click",
         // calculate the price, defined on the basis of km that have to be  travelled (0.21€ at km);
         // apply a discount of 20% if the customer is underage;
         // apply a discount of 40% if the customer is over 65.
-        
+        if(ageRange=="underage"){
+            pricePerKm = number * 0.21;
+            discount = pricePerKm * 0.20; 
+            pricePerKm = pricePerKm-discount;
+            console.log(pricePerKm.toFixed(2));
+        }else if(ageRange=="over"){
+            pricePerKm = number * 0.21;
+            discount = pricePerKm * 0.40; 
+            pricePerKm = pricePerKm-discount;
+            console.log(pricePerKm.toFixed(2));
+        }else{
+            pricePerKm = number * 0.21;
+            console.log(pricePerKm.toFixed(2));
+        }
 
     }
 );
