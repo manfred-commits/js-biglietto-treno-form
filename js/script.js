@@ -6,12 +6,24 @@
 // Il recap dei dati e l'output del prezzo finale va stampato in pagina (formattato con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 
 // 1. First, it's necessary to save the buttons that will drastically affect the page. The necessity of this action, stem from the fact that we will later have to 'toggle' with the use of the buttons the information of the exercise.
-var btnGenerate=document.getElementById("generate").value;
-var btnCancel=document.getElementById("cancel").value;
+var btnGenerate = document.getElementById("generate");
+var btnCancel=document.getElementById("cancel");
 
 // 2. for each button we'll have to generate an event using the addEventListener property, to allow us to execute the action of calculating the price by clicking on the designate button
-btnGenerate.addEventListener('click',
+btnGenerate.addEventListener("click",
     function(){
+        var name = document.getElementById("name").value;
+        var number = parseInt(document.getElementById("number").value);
+        var ageRange = document.getElementById("age").value;
+        console.log(number);
+        console.log(name);
+        console.log(ageRange);
+
 
     }
 );
+// btnCancel.addEventListener('click',
+//     function(){
+//         
+//     }
+// );
