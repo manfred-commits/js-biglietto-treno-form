@@ -23,10 +23,29 @@ label{
     padding: 5px;
     font-weight: 600;
 }
-
+button{
+    font-size: 20px;
+    font-weight: 600;
+    color:#b91450;
+    background-color: lightgrey;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px;
+}
+.ticket-container .ticket-cell-formatting span:not(#passenger-name){
+    display: inline-block;
+    padding: 30px 0 0;
+    font-weight: 400;
+}
+input.input-formatting, select.input-formatting{
+    padding: 7px 30px;
+    border: 1px solid #b91450;
+    border-radius: 5px;
+    text-align: center;
+}
 /* /general rules */
 
-/* section user dati */
+/* section dati biglietto */
 .container-form-dati, .container-form-biglietto{
     display: flex;
     flex-wrap: wrap;
@@ -34,7 +53,7 @@ label{
     background-color: white;
     border-radius: 10px;
     box-shadow: 2px 2px 8px 3px rgba(00,00,00,0.5);
-    width: 80%;
+    width: 70%;
     margin: auto;
 }
 .container-form-dati .input-form-data-formatting{
@@ -46,24 +65,47 @@ label{
     padding-bottom: 20px;
     text-align: center;
 }
-/* /section user dati */
+/* sezione bottoni */
+.container-form-dati .button-section{
+    margin-top: 30px;
+}
+button:hover{
+    color: white;
+    background-color: grey;
+    cursor: pointer;
+}
+/* /sezione bottoni */
+/* sezione hover e focus */
+.container-form-dati .input-form-data-formatting #number:focus{
+    background-color: #b91450;
+}
+
+/* /sezione hover e focus */
+
+/* /section dati biglietto */
 /* sezione costo biglietto */
 .container-form-biglietto{
     padding: 0px 10px 20px;
+    border-radius: 0;
+    padding: 20px;
     display: none;
 }
 .container-form-biglietto .ticket-container{
     border: 1px solid black;
+    border-left: 0;
+    border-right: 0;
     width: 100%;
-    display: flex;
+    height: 100%;
+    display: flex;    
+    justify-content: space-between;
 }
 .ticket-container .passenger-name{
-    background-color: lightgrey;
+    background-color: grey;
     justify-self: flex-end;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
 }
 .ticket-cell-formatting{
-    padding:20px;
+    padding: 20px;
 }
 /* /sezione costo biglietto */
 

@@ -20,15 +20,15 @@
         <section class="container-form-dati">
             <div class="input-form-data-formatting">
                 <label for="name">Nome Cognome</label><br>
-                <input type="text" name="name" id="name" placeholder="Inserisci il tuo nome: ">
+                <input class="input-formatting" type="text" name="name" id="name" placeholder="Inserisci il tuo nome: ">
             </div>
             <div class="input-form-data-formatting">
                 <label for="number">Km da percorrere</label><br>
-                <input type="number" name="number" id="number" placeholder="Inserisci i km da percorrere:">
+                <input class="input-formatting" type="number" name="number" id="number" placeholder="Inserisci i km da percorrere:" min="1" max="100">
             </div>
             <div class="input-form-data-formatting">
                 <label for="age">Fascia d'età</label><br>
-                <select name="age" id="age">
+                <select class="input-formatting" name="age" id="age">
                     <option value="underage">Minorenne</option>
                     <option value="adult">Maggiorenne</option>
                     <option value="over">Over 65</option>
@@ -47,20 +47,20 @@
             <h3>DETTAGLIO PASSEGGERI</h3>
             <div class="ticket-container">
                 <div class="ticket-cell-formatting passenger-name">
-                    <h4>NOME PASSEGGERO <br><span id="passenger-name"></span></h4>
+                    <h3>NOME PASSEGGERO <br><span id="passenger-name"></span></h3>
                     
                 </div>
                 <div class="ticket-cell-formatting">
-                    <h5>Offerta <br><span id="offer-type"></span></h5>
+                    <h4>Offerta <br><span id="offer-type"></span></h4>
                 </div>
                 <div class="ticket-cell-formatting">
-                    <h5>Carrozza <br><span id="train-room"></span></h5>
+                    <h4>Carrozza <br><span id="train-room"></span></h4>
                 </div>
                 <div class="ticket-cell-formatting">
-                    <h5>Codice CP <br><span id="train-number"></span></h5>
+                    <h4>Codice CP <br><span id="train-number"></span></h4>
                 </div>
                 <div class="ticket-cell-formatting">
-                    <h5>Costo Biglietto <br><span id="ticket-price"></span> €</h5>
+                    <h4>Costo Biglietto <br><span id="ticket-price"></span> €</h4>
                 </div>
             </div>
         </section>
