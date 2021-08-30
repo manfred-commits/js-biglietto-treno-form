@@ -9,10 +9,13 @@ body{
     background-color: #b91450;
     font-family: 'Open Sans', sans-serif;
 }
-h1{
+h2{
     color: white;
     text-align: center;
     padding: 20px;
+}
+h3{
+    width: 100%;
 }
 label{
     display: inline-block;
@@ -23,7 +26,7 @@ label{
 /* /general rules */
 
 /* section user dati */
-.contaier-form-dati{
+.container-form-dati, .container-form-biglietto{
     display: flex;
     flex-wrap: wrap;
     justify-content:center ;
@@ -33,13 +36,31 @@ label{
     width: 80%;
     margin: auto;
 }
-.input-form-data-formatting{
+.container-form-dati .input-form-data-formatting{
     text-align: center;
     padding: 25px;
 }
-.button-section{
+.container-form-dati .button-section{
     width: 100%;
     padding-bottom: 20px;
     text-align: center;
 }
 /* /section user dati */
+/* sezione costo biglietto */
+.container-form-biglietto{
+    padding: 0px 10px 20px;
+}
+.container-form-biglietto .ticket-container{
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+}
+.ticket-container .passenger-name{
+    background-color: lightgrey;
+    justify-self: flex-end;
+    padding-bottom: 80px;
+}
+.ticket-cell-formatting{
+    padding:20px;
+}
+/* /sezione costo biglietto */

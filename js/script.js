@@ -39,7 +39,8 @@ btnGenerate.addEventListener("click",
             pricePerKm = number * 0.21;
             console.log(pricePerKm.toFixed(2));
         }
-
+        // 4.Now that the values are estimated, in the different cases, it's necessary to print the acquired values to the container-form-biglietto
+        
     }
 );
 // btnCancel.addEventListener('click',

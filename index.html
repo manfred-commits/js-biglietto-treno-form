@@ -15,9 +15,9 @@
         <title>biglietto-treno-form</title>
     </head>
     <body>
-        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
         <!-- sezione inserimento dati biglietto -->
-        <section class="contaier-form-dati">
+        <section class="container-form-dati">
             <div class="input-form-data-formatting">
                 <label for="name">Nome Cognome</label><br>
                 <input type="text" name="name" id="name" placeholder="Inserisci il tuo nome: ">
@@ -42,7 +42,29 @@
         </section>
         <!-- /sezione inserimento dati biglietto -->
         <!-- sezione costo biglietto -->
-        <section class="container-form-biglietto"></section>
+        <h2>IL TUO BIGLIETTO</h2>
+        <section class="container-form-biglietto">
+            <h3>DETTAGLIO PASSEGGERI</h3>
+            <div class="ticket-container">
+                <div class="ticket-cell-formatting passenger-name">
+                    <h4>NOME PASSEGGERO <br><span id="passenger-name"></span></h4>
+                    
+                </div>
+                <div class="ticket-cell-formatting">
+                    <h5>Offerta <br><span id="offer-type"></span></h5>
+                </div>
+                <div class="ticket-cell-formatting">
+                    <h5>Carrozza <br><span id="train-room"></span></h5>
+                </div>
+                <div class="ticket-cell-formatting">
+                    <h5>Codice CP <br><span id="train-number"></span></h5>
+                </div>
+                <div class="ticket-cell-formatting">
+                    <h5>Costo Biglietto <br><span id="ticket-price"></span></h5>
+                </div>
+            </div>
+        </section>
+        
         <!-- /sezione costo biglietto -->
         <script src="./js/script.js"></script>
     </body>
