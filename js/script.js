@@ -12,6 +12,8 @@ var discount = 0;
 var pricePerKm=0;
 var offer="";
 
+document.getElementById("generate").style.marginRight="10px";
+document.getElementById("cancel").style.marginLeft="10px";
 // 2. for each button we'll have to generate an event using the addEventListener property, to allow us to execute the action of calculating the price by clicking on the designated button
 btnGenerate.addEventListener("click",
     function(){
@@ -30,41 +32,49 @@ btnGenerate.addEventListener("click",
         // 3. having gathered the information required to estimate the price in the different cases(underage/adult/over 65), it is now necessary to create the appropriate if statement/statements to satisfy the condition of the exercise. 
         
         // Which is:
-
-        // calculate the price, defined on the basis of km that have to be  travelled (0.21€ at km);
-        // apply a discount of 20% if the customer is underage;
-        // apply a discount of 40% if the customer is over 65.
-        if(ageRange=="underage"){
-            pricePerKm = number * 0.21;
-            discount = pricePerKm * 0.20; 
-            pricePerKm = pricePerKm - discount;
-            offer="Biglietto Minorenni";            
-            console.log(pricePerKm.toFixed(2));
-        }else if(ageRange=="over"){
-            pricePerKm = number * 0.21;
-            discount = pricePerKm * 0.40; 
-            pricePerKm = pricePerKm - discount;
-            offer="Biglietto Over 65";
-            console.log(pricePerKm.toFixed(2));
-        }else{
-            pricePerKm = number * 0.21;
-            offer="Biglietto Standard";
-            console.log(pricePerKm.toFixed(2));
+        
+        // control of the input
+        if(name==""){
+            alert("Insert a proper name!");
+        }else if(isNaN(number)){
+            alert("Insert a proper amount of km!");
         }
-        // 4.Now that the values are estimated, in the different cases, it's necessary to print the acquired values to the container-form-biglietto which is going to have to be visible 
-
-        // 4.1 makes the ticket-container visible
-
-        document.getElementById("ticket").classList.add("open");
-
-        // 4.2 prints the values acquired to the inner html of the appropriate tags in the ticket-container section
-        document.getElementById("passenger-name").innerHTML=name;
-        document.getElementById("offer-type").innerHTML=offer;
-        document.getElementById("train-room").innerHTML=Math.floor((Math.random() * 10) + 1);;
-        document.getElementById("train-number").innerHTML=trainNumber;
-        document.getElementById("ticket-price").innerHTML=pricePerKm.toFixed(2);
-
-
+        else{
+            // calculate the price, defined on the basis of km that have to be  travelled (0.21€ at km);
+            // apply a discount of 20% if the customer is underage;
+            // apply a discount of 40% if the customer is over 65.
+            if(ageRange=="underage"){
+                pricePerKm = number * 0.21;
+                discount = pricePerKm * 0.20; 
+                pricePerKm = pricePerKm - discount;
+                offer="Biglietto Minorenni";            
+                console.log(pricePerKm.toFixed(2));
+            }else if(ageRange=="over"){
+                pricePerKm = number * 0.21;
+                discount = pricePerKm * 0.40; 
+                pricePerKm = pricePerKm - discount;
+                offer="Biglietto Over 65";
+                console.log(pricePerKm.toFixed(2));
+            }else{
+                pricePerKm = number * 0.21;
+                offer="Biglietto Standard";
+                console.log(pricePerKm.toFixed(2));
+            }
+            // 4.Now that the values are estimated, in the different cases, it's necessary to print the acquired values to the container-form-biglietto which is going to have to be visible 
+    
+            // 4.1 makes the ticket-container visible
+    
+            document.getElementById("ticket").classList.add("open");
+            
+            // 4.2 prints the values acquired to the inner html of the appropriate tags in the ticket-container section
+            document.getElementById("passenger-name").innerHTML=name;
+            document.getElementById("offer-type").innerHTML=offer;
+            document.getElementById("train-room").innerHTML=Math.floor((Math.random() * 10) + 1);;
+            document.getElementById("train-number").innerHTML=trainNumber;
+            document.getElementById("ticket-price").innerHTML=pricePerKm.toFixed(2);
+    
+    
+        }
     }
 );
 // second button that at the click of "Annulla" makes the ticket price section disappear and resets the input tags and the select
