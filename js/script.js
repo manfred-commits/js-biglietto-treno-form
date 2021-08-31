@@ -82,7 +82,7 @@ btnCancel.addEventListener('click',
         // resets the input tags and the select to ""
         document.getElementById("name").value="";
         document.getElementById("number").value="";
-        document.getElementById("age").value="";
+        document.getElementById("age").selectedIndex="0";
         
     }
 );
