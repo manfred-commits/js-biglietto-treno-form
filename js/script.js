@@ -47,13 +47,13 @@ btnGenerate.addEventListener("click",
                 pricePerKm = number * 0.21;
                 discount = pricePerKm * 0.20; 
                 pricePerKm = pricePerKm - discount;
-                offer="Biglietto Minorenni";            
+                offer="Sconto Minorenni";            
                 console.log(pricePerKm.toFixed(2));
             }else if(ageRange=="over"){
                 pricePerKm = number * 0.21;
                 discount = pricePerKm * 0.40; 
                 pricePerKm = pricePerKm - discount;
-                offer="Biglietto Over 65";
+                offer="Sconto Silver";
                 console.log(pricePerKm.toFixed(2));
             }else{
                 pricePerKm = number * 0.21;
@@ -71,7 +71,7 @@ btnGenerate.addEventListener("click",
             document.getElementById("offer-type").innerHTML=offer;
             document.getElementById("train-room").innerHTML=Math.floor((Math.random() * 10) + 1);;
             document.getElementById("train-number").innerHTML=trainNumber;
-            document.getElementById("ticket-price").innerHTML=pricePerKm.toFixed(2);
+            document.getElementById("ticket-price").innerHTML=pricePerKm.toFixed(2)+" €";
     
     
         }
