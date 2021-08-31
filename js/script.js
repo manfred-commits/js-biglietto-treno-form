@@ -34,12 +34,7 @@ btnGenerate.addEventListener("click",
         // Which is:
         
         // control of the input
-        if(name==""){
-            alert("Insert a proper name!");
-        }else if(isNaN(number)){
-            alert("Insert a proper amount of km!");
-        }
-        else{
+        if(name!="" && !isNaN(number) && number>0 && ageRange!=""){
             // calculate the price, defined on the basis of km that have to be  travelled (0.21€ at km);
             // apply a discount of 20% if the customer is underage;
             // apply a discount of 40% if the customer is over 65.
@@ -74,6 +69,8 @@ btnGenerate.addEventListener("click",
             document.getElementById("ticket-price").innerHTML=pricePerKm.toFixed(2)+" €";
     
     
+        }else{
+            alert("Insert the proper values!");
         }
     }
 );
